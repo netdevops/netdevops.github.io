@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "Welcome!"
+date:   2018-02-10 11:27:11 -0600
+categories: initial post 
+---
+{% highlight python %}
+print("Hello")
+{% endhighlight %}
+
+I spend my days, in my professional life, building and operating networks. In the last few years, I've been heavily involved in writing code to automate all the redundant tasks. Our team has found that putting forth this effort has made our work more efficient and less risky. Now, when we do have a encounter an issue, we identify the problem in an RCA, and hard code the fix in code, rather than rely on people to remember to follow new process `x`.
+
+Over time, you can expect to see posts pertaining to:
+
+* tips and tricks as I expand my knowledge of software development
+* sharing code that can jumpstart your introduction `(or expand your current toolset)` into network programability
+* exploring the different aspects of the network programmability workflow
+* and hopefully get some of my colleagues to share their experiences
+
+{% highlight ruby %}
+puts 'Regards'
+{% endhighlight %}
+
+[jtdub][jtdub-gh]
+
+[jtdub-gh]: https://github.com/jtdub
