@@ -2,7 +2,8 @@
 layout: post
 title:  "Welcome!"
 date:   2018-02-10 11:27:11 -0600
-categories: initial post 
+tags:
+- welcome
 ---
 {% highlight python %}
 print("Hello")
