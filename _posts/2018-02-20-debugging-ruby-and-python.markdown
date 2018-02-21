@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[TIP] Debugging in Ruby and Python"
-date:   2018-02-19 20:30:00 -0600
+date:   2018-02-20 20:30:00 -0600
 tags:
 - python
 - ruby
@@ -92,9 +92,13 @@ irb(main):021:0> data.hash_method
 irb(main):022:0>
 ```
 
-In Ruby, I was able to use the `.methods` syntax to determine the available methods. Then use the `.class` syntax to determine the data type of the method.
+In Ruby, you can use the `.methods` syntax to determine the available methods. Then use the `.class` syntax to determine the data type of the method.
 
 As I dig deeper into Ruby, I plan on continuing these comparison blogs. If you have any comments or blog suggestions, open a [github issue][netdevops-gh]. 
+
+{% highlight ruby %}
+puts 'Regards'
+{% endhighlight %}
 
 [jtdub][jtdub-gh]
 
