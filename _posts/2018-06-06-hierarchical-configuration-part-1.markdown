@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hierarchical Configuration, Part 1"
-date:   2018-06-06 00:00:00 -0600
+date:   2018-06-06 22:48:00 -0600
 tags:
 - hierarchical configuration
 - hconfig
