@@ -163,7 +163,7 @@ interface Vlan4
 
 Pretty awesome, right? That's hierarchical configuration at its core. There are other features from getting granular with sectional exiting, command ordering, or idempotent commands; to targeting specific parts of configuration with a tagging mechanism. I'll explain those in future blogs.
 
-Hierarchical Configuration is on [github]([https://github.com/netdevops/hier_config]), code documentation is available [here]([https://netdevops.io/hier_config/hier_config/]), and you can ask question on networktocode.slack.com, #hier_config.
+Hierarchical Configuration is on [github](https://github.com/netdevops/hier_config), code documentation is available [here](https://netdevops.io/hier_config/hier_config/), and you can ask question on networktocode.slack.com, #hier_config.
 
 [jtdub][jtdub-gh]
 
