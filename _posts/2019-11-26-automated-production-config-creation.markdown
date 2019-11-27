@@ -14,7 +14,7 @@ tags:
 print("Hello")
 {% endhighlight %}
 
-Throughout this year, I've been involved in a network engineering project that has required fairly risky configurationchanges. In order to test our proposed configuration changes, we built a virtual large scale lab with a number of eve-ng hypervisors and hundreds of routers. The virtual lab mimics our production routers as close as we possibly can. It's become increasingly difficult to keep the virtual lab in sync with production routers. In order to make this process easier, I've been developing [prod2lab](https://github.com/netdevops/prod2lab). Prod2lab allows engineers to define a device pair (a prod and lab device), map production interfaces to lab interfaces, and generate a configuration that one can put onto the lab device. In this blog, I'll introduce prod2lab, discuss how it works, and layout my plans for its future.
+This year, I've been involved in a network engineering project that has required fairly risky configuration changes. In order to test our proposed configuration changes, we built a virtual large scale lab with a number of eve-ng hypervisors and hundreds of routers. The virtual lab mimics our production routers as close as we possibly can. It's become increasingly difficult to keep the virtual lab in sync with production routers. In order to make this process easier, I've been developing [prod2lab](https://github.com/netdevops/prod2lab). Prod2lab allows engineers to define a device pair (a prod and lab device), map production interfaces to lab interfaces, and generate a configuration that one can put onto the lab device. In this blog, I'll introduce prod2lab, discuss how it works, and layout my plans for its future.
 
 Prod2lab is a python app that utilizes the django web framework. Setting it up is pretty simple.
 
@@ -60,7 +60,7 @@ celery status
 ./manage.py runserver
 ```
 
-At this point, prod2app is ready for use. The first thing you'll want to do is access web interface at [http://localhost:8000](http://localhost:8000). The first thing that you'll notice is that you're logged in as an anonymous user. As anonymous, you won't be able to accomplish anything except view the home page. You'll need to login.
+At this point, prod2app is ready for use. The first thing you'll want to do is access web interface at [http://localhost:8000](http://localhost:8000). You'll notice is that you're logged in as an anonymous user. As anonymous, you won't be able to accomplish anything except view the home page. You'll need to login.
 
 ![alt text](/assets/prod2lab-login.png "login to prod2lab")
 
@@ -91,8 +91,7 @@ With production interfaces and now lab interfaces added, you can create the inte
 
 ![alt text](/assets/prod2lab-interface-maps.png "prod2lab interface maps")
 
-With the interface maps created, all of the prerequisites have been completed to create a lab device. Under the hood, 
-prod2lab uses [hier_config](https://github.com/netdevops/hier_config). To perform the interface mapping, prod2lab utilizes a hier_config option called `per_line_sub`, which searches an entire string for a string and replaces it. Prod2lab also creates an `ignore` tag to find configurations that are not needed for the lab. By default, I strip out items such as tacacs, aaa, logging, snmp, ntp. Prod2lab also has a section that allows a user to define their own sections of configuration to match against and ignore. What's rendered is a configuration that a user can push to thier lab device.
+With the interface maps created, all of the prerequisites have been completed to create a lab device. Under the hood, prod2lab uses [hier_config](https://github.com/netdevops/hier_config). To perform the interface mapping, prod2lab utilizes a hier_config option called `per_line_sub`, which searches an entire string for a string and replaces it. Prod2lab also creates an `ignore` tag to find configurations that are not needed for the lab. By default, I strip out items such as tacacs, aaa, logging, snmp, ntp. Prod2lab also has a section that allows a user to define their own sections of configuration to match against and ignore. What's rendered is a configuration that a user can push to thier lab device.
 
 ![alt text](/assets/prod2lab-fetch-lab-config.png "prod2lab fetch lab config")
 
